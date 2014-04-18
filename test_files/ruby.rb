@@ -42,7 +42,7 @@ class SudokuBoard
       @board << Cell.new(indiv_num, index)
     end
     @NUMS_CONST = ["1","2","3","4","5","6","7","8","9"]
-    #<$$ Test task 4, in ruby file$$>
+    ##note## Test task 4, in ruby file##note##
   end
   
   def is_solved?
