@@ -10,4 +10,4 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/awertman/NoteAble'
   s.license     = 'MIT'
   s.executables << 'noteable'
-end
+endn
