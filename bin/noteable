@@ -16,7 +16,9 @@ routes = {
 # Match route and call controller method
   routes.each do |method, inputs|
     if inputs.select { |input| ARGV[0] =~ input }.length > 0
-      puts "I am in the route: #{method}"
       NoteAble.send(method, ARGV.join)
+    elsif ARGV.length < 1
+      NoteAble.find_all_and_print
+      break
     end
   end

@@ -5,7 +5,7 @@ require_relative 'view'
 require 'pathname'
 
 module NoteAble
-	def self.find_all_and_print args
+	def self.find_all_and_print
 		View.render_page { render_notes group_by_file(parse_files) }
 	end
 
@@ -34,16 +34,16 @@ module NoteAble
   	Note.new note: note[:note], line: note[:line], filepath: FilePath.new(note[:filepath])
   end
 
-  def self.version
+  def self.version args
     View.version
   end
 
-  def self.help
+  def self.help args
     View.help
   end
 
   def self.tag tag
-    $pattern = /(.*)(##"#{tag}"##)(.+)(##"#{tag}"##.*/) if /^[a-zA-Z]+$/ =~ tag
+    $pattern = /(.*)(##"#{tag}"##)(.+)(##"#{tag}"##.*)/ if /^[a-zA-Z]+$/ =~ tag
   end
 
   def self.render_notes notes
