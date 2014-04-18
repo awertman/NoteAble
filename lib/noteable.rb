@@ -34,6 +34,18 @@ module NoteAble
   	Note.new note: note[:note], line: note[:line], filepath: FilePath.new(note[:filepath])
   end
 
+  def self.version
+    View.version
+  end
+
+  def self.help
+    View.help
+  end
+
+  def self.tag tag
+    $pattern = /(.*)(##"#{tag}"##)(.+)(##"#{tag}"##.*/) if /^[a-zA-Z]+$/ =~ tag
+  end
+
   def self.render_notes notes
     notes.each do |filepath, notes|
       View.render_file filepath.to_s
