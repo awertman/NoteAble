@@ -7,9 +7,12 @@ class View
     puts '-' * @width
     puts 'You have some NoteAble comments in your file...'.center(@width)
     puts '-' * @width
-
+    puts
+    puts
+    puts "To open file in Sublime: '$ notable #'".center(@width)
+    puts
     yield
-    
+    puts
     puts
     puts '-' * @width
     puts 'Made with <3.. by Carolyn Phil James Aaron'.center(@width)
