@@ -9,7 +9,7 @@ module Parser
 
   private
   def self.parse_matches
-    File.open(@file_path, 'r').each_with_index do |content, index|
+    File.open(@file_path, "r:ASCII-8BIT").each_with_index do |content, index|
       @matches << { filepath: @file_path, note: content, line: index } if content =~ @pattern
     end
   end
