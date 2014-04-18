@@ -28,11 +28,21 @@ Go to a specific file/comment by typing the id of the file:
 
 		$ noteable <id>
 
-You can set your own key-bindings in Sublime (or other) with the following code ( e.g. ```super + .``` ):
+You can set your own key-bindings in Sublime (or other).
+
+This binding example will add ```##note## ##note##``` tags with the cursor in the middle when you press ```super + .```
 
 ```ruby
+in Sublime Text 2 > Preferences > Key Bindings - User:
+
 // New note tags with cursor in the middle
 { "keys": ["super+."], "command": "insert_snippet", "args": {"contents": "##note##$0 ##note##"} },
+```
+
+This binding example will add ```##note## ##note##``` AROUND a selection when highlighted ```super + .```
+
+```ruby
+in Sublime Text 2 > Preferences > Key Bindings - User:
 
 // Insert note tags around selection
 { "keys": ["super+."], "command": "insert_snippet", "args": {"contents": "##note##${0:$SELECTION}##note##"}, "context":
@@ -43,6 +53,14 @@ You can set your own key-bindings in Sublime (or other) with the following code 
 }
 ```
 
+===================================================================================================
+#### How do I customize it?
+
+If you want to use your own tag word instead of ```##note##```:
+
+	 $ noteable --t phil
+
+You can then use ```##phil##``` to mark all your notes
 
 ===================================================================================================
 Made with <3 by Carolyn, James, Phil, Aaron.
