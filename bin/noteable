@@ -4,4 +4,4 @@ require_relative '../lib/noteable'
 
 $pattern = /(.*)(##note##)(.+)(##note##.*)/
 
-NoteAble.find_all_and_print
+ARGV.length == 0 ? NoteAble.find_all_and_print : NoteAble.send('open', ARGV.join)
