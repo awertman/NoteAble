@@ -1,5 +1,5 @@
 class Note
-  @@count = 1
+  @@count = 0
   attr_reader :filepath, :note, :line, :id
 
   def initialize args
@@ -17,6 +17,6 @@ class Note
   def to_s
     str = ""
     str << "#{@line}".rjust(5) + ": "
-    str << "#{note} (#{id})"
+    str << "#{note} <#{id}>"
   end
 end

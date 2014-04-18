@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/noteable'
-
-
-
-ARGV.length == 0 ? NoteAble.find_all_and_print : NoteAble.send(ARGV.shift, ARGV.join)

@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/noteable'
+
+$pattern = /(.*)(##note##)(.+)(##note##.*)/
+
+ARGV.length == 0 ? NoteAble.find_all_and_print : NoteAble.send('open', ARGV.join)

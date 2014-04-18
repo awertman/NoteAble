@@ -97,7 +97,7 @@ Don't worry about the particular format of the board when printed. The key thing
 
 #### What about performance?
 
-Do *not* worry about performance yet! Optimizations can come later. Clean, logical code is more important and will be easier to refactor. <$$ Test task 2, in markdown file$$>
+Do *not* worry about performance yet! Optimizations can come later. Clean, logical code is more important and will be easier to refactor. ##note## Test task 2, in markdown file##note##
 
 ###Release 2 : Testing!
 
@@ -107,6 +107,6 @@ Remember, always start with the simplest test case possible. For a Sudoku solver
 609238745274561398853947621486352179792614583531879264945723816328196457167485932
 ```
 
-<!-- ##Optimize Your Learning --><!--<$$ Test task 3, in markdown file$$>-->
+<!-- ##Optimize Your Learning --><!--##note## Test task 3, in markdown file##note##-->
 
 ##Resources
