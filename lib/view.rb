@@ -22,7 +22,7 @@ class View
   end
 
   def self.render_note(note)
-    str = ' ' * 5 + "#{note}".rjust(5)
+    str = ' ' * 7 + "#{note}".rjust(5)
     puts str.length > @width ? str.slice(0, @width - 4) + '...' : str
   end
 end
