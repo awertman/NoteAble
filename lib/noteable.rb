@@ -5,7 +5,7 @@ require_relative 'view'
 require 'pathname'
 
 module NoteAble
-	def self.find_all_and_print
+	def self.find_all_and_print args
 		View.render_page { render_notes group_by_file(parse_files) }
 	end
 
@@ -27,7 +27,7 @@ module NoteAble
   end
 
   def self.group_by_file notes
-    notes.group_by { |note| note.filepath }  	
+    notes.group_by { |note| note.filepath }
   end
 
   def self.build_note note

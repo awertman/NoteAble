@@ -4,19 +4,19 @@ require_relative '../lib/noteable'
 
 $pattern = /(.*)(##note##)(.+)(##note##.*)/
 
-ARGV.length == 0 ? NoteAble.find_all_and_print : NoteAble.send('open', ARGV.join)
+# Possible routes
+routes = {
+  find_all_and_print: [nil],
+  open: [/\d/],
+  help: [/-h/, /--help/],
+  version: [/-v/,/--version/],
+  tag: [/-t/ , /--tag/]
+  }
 
-def execute_commands(command)
-  case command[0]
-  when /\d/
-
-  when '-h' || '--help'
-    View.help
-  when '-v' || '--version'
-    View.version
-  when '-s' || '--setting'
-    View.setting
-  when '-t' || '--tag'
-    # reset_tag(command[1])
-    $pattern = /(.*)("#{command[1]}")(.+)("#{command[1]}".*)/
-end
+# Match route and call controller method
+  routes.each do |method, inputs|
+    if inputs.select { |input| ARGV[0] =~ input }.length > 0
+      puts "I am in the route: #{method}"
+      NoteAble.send(method, ARGV.join)
+    end
+  end
