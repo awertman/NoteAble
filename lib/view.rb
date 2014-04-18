@@ -7,9 +7,12 @@ class View
     puts '-' * @width
     puts 'You have some NoteAble comments in your file...'.center(@width)
     puts '-' * @width
-
+    puts
+    puts
+    puts "To open file in Sublime: '$ notable #'".center(@width)
+    puts
     yield
-    
+    puts
     puts
     puts '-' * @width
     puts 'Made with <3.. by Carolyn Phil James Aaron'.center(@width)
@@ -22,7 +25,7 @@ class View
   end
 
   def self.render_note(note)
-    str = ' ' * 7 + "#{note}".rjust(5)
+    str = ' ' * 5 + "#{note}".rjust(5)
     puts str.length > @width ? str.slice(0, @width - 4) + '...' : str
   end
 end
