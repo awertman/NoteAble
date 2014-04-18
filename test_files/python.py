@@ -127,7 +127,7 @@ class AppConfig(object):
 
         # Obtain app name here rather than in AppClass.__init__ to keep
         # all error checking for entries in INSTALLED_APPS in one place.
-        # <$$ This is task 5 or something, in a python file$$>
+        # <$$ This is task 5 or something, in a python fikjahsdfkjhzdfksljhzdfklsjhasdfglkhjasdfglkjhasdfglkjhasdfglkjhle$$>
         try:
             app_name = cls.name
         except AttributeError:

@@ -1,5 +1,3 @@
-
-
 module Parser
   def self.parse file_path
     @file_path = file_path
@@ -9,13 +7,8 @@ module Parser
     filter_matches
   end
 
-
-
   private
-
   def self.parse_matches
-    # p "parase matches"
-    # p @file_path
     File.open(@file_path, 'r').each_with_index do |content, index|
       @matches << { filepath: @file_path, note: content, line: index } if content =~ @pattern
     end
