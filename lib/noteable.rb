@@ -10,7 +10,7 @@ module NoteAble
 	private
 	def self.parse_files(notes=[])
 		Dir["**/*"].each do |file|
-			if file =~ /\./
+			if (file =~ /\./) && (file !~ /(\.gem)/)
 				notes << (Parser.parse file).map! { |note| Note.new(note) }
 			end
 		end
