@@ -10,7 +10,7 @@ An easy way to create and track comments within an entire directory.
 
 To install, in your terminal type: 
 
-		gem install noteable
+		$ gem install noteable
 
 ===================================================================================================
 #### How do I use it?
@@ -22,13 +22,13 @@ Make comments in your file and open and close them with the tags ```##note##```.
 
 To find all the comments in your directory by file, execute NoteAble in your terminal by typing:
 
-		noteable
+		$ noteable
 
 Go to a specific file/comment by typing the id of the file:
 
-		noteable <id>
+		$ noteable <id>
 
-You can set your own key-bindings in Sublime (or other) with the following code ( e.g. super + . ):
+You can set your own key-bindings in Sublime (or other) with the following code ( e.g. ```super + .``` ):
 
 ```ruby
 // New note tags with cursor in the middle
