@@ -9,7 +9,7 @@ class Note
 
   def to_s
     str = ""
-    str << "Line" + "#{@line}".rjust(5) + ": "
+    str << "#{@line}".rjust(5) + ": "
     str << "#{note}"
   end
 end
